@@ -2,24 +2,35 @@ package com.driveloop.rest.entities;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 import java.util.Date;
 
 @Entity
 @Table(name = "car_request")
 public class CarRequest {
-    @Id @Column(name = "request_id")
-    private long requestID;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private long requestId;
 
-    @Column(name = "owner_id")
-    private long ownerID;
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "owner_id", nullable = false)
+    private Owner owner;
 
-    @Column(name = "customer_id")
-    private long customerID;
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "customer_id", nullable = false)
+    private Customer customer;
 
-    @Column(name = "car_id")
-    private long carID;
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "car_id", nullable = false)
+    private Garage car;
 
     @Column(name = "days")
     private byte days;
@@ -27,6 +38,7 @@ public class CarRequest {
     @Column(name = "request_status")
     private String requestStatus;
 
+    @Temporal(TemporalType.TIMESTAMP)
     @Column(name = "request_time")
     private Date requestTime;
 }

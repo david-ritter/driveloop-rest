@@ -2,17 +2,24 @@ package com.driveloop.rest.entities;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
 @Table(name = "garage")
 public class Garage {
-    @Id @Column(name = "car_id")
-    private long carID;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private long carId;
 
-    @Column(name = "owner_id")
-    private long ownerID;
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "owner_id", nullable = false)
+    private Owner owner;
 
     @Column(name = "brand")
     private String brand;
@@ -37,6 +44,9 @@ public class Garage {
 
     @Column(name = "plate")
     private String plate;
+
+    @Column(name = "image")
+    private String image;
 
     @Column(name = "fare")
     private float fare;

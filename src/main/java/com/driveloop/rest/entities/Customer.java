@@ -1,41 +1,54 @@
 package com.driveloop.rest.entities;
 
+import org.springframework.format.annotation.DateTimeFormat;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 import java.util.Date;
 
 @Entity
 @Table(name = "customer")
 public class Customer {
-    @Id @Column(name = "customer_id")
-    public long customerID;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private long customerId;
 
-    @Column(name = "user_id")
-    public long userID;
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "user_id", nullable = false)
+    private User user;
 
     @Column(name = "firstname")
-    public String firstName;
+    private String firstName;
 
     @Column(name = "lastname")
-    public String lastName;
+    private String lastName;
 
     @Column(name = "phone")
-    public String phone;
-
+    private String phone;
+    
     @Column(name = "dui")
-    public String dui;
+    private String dui;
 
     @Column(name = "licence")
-    public String licence;
+    private String licence;
 
+    @Temporal(TemporalType.DATE)
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
     @Column(name = "birthdate")
-    public Date birthDate;
+    private Date birthDate;
 
     @Column(name = "city")
-    public String city;
+    private String city;
 
     @Column(name = "location")
-    public String location;
+    private String location;
 }
