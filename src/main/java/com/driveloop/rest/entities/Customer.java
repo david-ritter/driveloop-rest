@@ -1,7 +1,6 @@
 package com.driveloop.rest.entities;
 
 import org.springframework.format.annotation.DateTimeFormat;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
