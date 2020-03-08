@@ -1,7 +1,7 @@
-package com.driveloop.rest.models.services;
+package com.driveloop.rest.services;
 
-import com.driveloop.rest.entities.User;
-import com.driveloop.rest.models.repository.UserRepository;
+import com.driveloop.rest.models.User;
+import com.driveloop.rest.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

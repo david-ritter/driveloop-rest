@@ -1,7 +1,7 @@
-package com.driveloop.rest.models.services;
+package com.driveloop.rest.services;
 
-import com.driveloop.rest.entities.Garage;
-import com.driveloop.rest.models.repository.GarageRepository;
+import com.driveloop.rest.models.Garage;
+import com.driveloop.rest.repository.GarageRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

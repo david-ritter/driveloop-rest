@@ -1,7 +1,7 @@
-package com.driveloop.rest.models.services;
+package com.driveloop.rest.services;
 
-import com.driveloop.rest.entities.Owner;
-import com.driveloop.rest.models.repository.OwnerRepository;
+import com.driveloop.rest.models.Owner;
+import com.driveloop.rest.repository.OwnerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

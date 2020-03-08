@@ -1,6 +1,6 @@
-package com.driveloop.rest.models.repository;
+package com.driveloop.rest.repository;
 
-import com.driveloop.rest.entities.User;
+import com.driveloop.rest.models.User;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 

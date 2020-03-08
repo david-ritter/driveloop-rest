@@ -1,4 +1,4 @@
-package com.driveloop.rest.entities;
+package com.driveloop.rest.models;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -13,8 +13,8 @@ import javax.persistence.TemporalType;
 import java.util.Date;
 
 @Entity
-@Table(name = "owner_review")
-public class OwnerReview {
+@Table(name = "customer_review")
+public class CustomerReview {
     @Id
     @GeneratedValue()
     private long reviewId;
@@ -24,10 +24,10 @@ public class OwnerReview {
     private CarRequest request;
 
     @Column(name = "trust_rate")
-    private byte serviceRate;
+    private byte trustRate;
 
     @Column(name = "recommend_rate")
-    private byte qualityRate;
+    private byte recommendRate;
 
     @Column(name = "comment")
     private String comment;

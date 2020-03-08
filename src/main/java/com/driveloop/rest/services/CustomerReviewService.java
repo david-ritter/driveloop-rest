@@ -1,7 +1,7 @@
-package com.driveloop.rest.models.services;
+package com.driveloop.rest.services;
 
-import com.driveloop.rest.entities.CustomerReview;
-import com.driveloop.rest.models.repository.CustomerReviewRepository;
+import com.driveloop.rest.models.CustomerReview;
+import com.driveloop.rest.repository.CustomerReviewRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

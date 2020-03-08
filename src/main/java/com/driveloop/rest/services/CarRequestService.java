@@ -1,7 +1,7 @@
-package com.driveloop.rest.models.services;
+package com.driveloop.rest.services;
 
-import com.driveloop.rest.entities.CarRequest;
-import com.driveloop.rest.models.repository.CarRequestRepository;
+import com.driveloop.rest.models.CarRequest;
+import com.driveloop.rest.repository.CarRequestRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

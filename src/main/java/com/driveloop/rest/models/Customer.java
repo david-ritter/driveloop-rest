@@ -1,4 +1,4 @@
-package com.driveloop.rest.entities;
+package com.driveloop.rest.models;
 
 import org.springframework.format.annotation.DateTimeFormat;
 import javax.persistence.Column;

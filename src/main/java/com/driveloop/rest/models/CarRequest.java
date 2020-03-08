@@ -1,4 +1,4 @@
-package com.driveloop.rest.entities;
+package com.driveloop.rest.models;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
