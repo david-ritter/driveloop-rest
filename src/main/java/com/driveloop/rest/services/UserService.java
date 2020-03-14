@@ -41,4 +41,12 @@ public class UserService implements UserI {
     public void delete(Long id) {
         repository.deleteById(id);
     }
+
+    public Long count() {
+        return repository.count();
+    }
+
+    public Iterable<User> findAllById(Iterable<Long> idArray) {
+        return repository.findAllById(idArray);
+    }
 }

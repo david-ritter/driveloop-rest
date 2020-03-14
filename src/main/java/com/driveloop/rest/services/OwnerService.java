@@ -41,4 +41,12 @@ public class OwnerService implements OwnerI {
     public void delete(Long id) {
         repository.deleteById(id);
     }
+
+    public Long count() {
+        return repository.count();
+    }
+
+    public Iterable<Owner> findAllById(Iterable<Long> idArray) {
+        return repository.findAllById(idArray);
+    }
 }
