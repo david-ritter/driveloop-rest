@@ -48,6 +48,6 @@ public class CarRequest {
     private String requestStatus;
 
     @Temporal(TemporalType.TIMESTAMP)
-    @Column(name = "request_time")
+    @Column(name = "request_time", columnDefinition = "timestamp default current_timestamp", insertable = false)
     private Date requestTime;
 }

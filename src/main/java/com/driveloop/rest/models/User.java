@@ -39,6 +39,6 @@ public class User {
     private String userType;
 
     @Temporal(TemporalType.TIMESTAMP)
-    @Column(name = "created_at")
+    @Column(name = "created_at", columnDefinition = "timestamp default current_timestamp", insertable = false)
     private Date createdAt;
 }
