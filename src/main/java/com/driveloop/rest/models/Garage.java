@@ -26,7 +26,7 @@ import java.io.Serializable;
 public class Garage implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long carId;
+    private Long carId;
 
     @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
     @ManyToOne(fetch = FetchType.LAZY)
@@ -46,7 +46,7 @@ public class Garage implements Serializable {
     private String year;
 
     @Column(name = "capacity")
-    private byte capacity;
+    private Byte capacity;
 
     @Column(name = "fuel")
     private String fuel;
@@ -61,7 +61,7 @@ public class Garage implements Serializable {
     private String image;
 
     @Column(name = "fare")
-    private float fare;
+    private Float fare;
 
     @Column(name = "status")
     private String carStatus;

@@ -48,4 +48,9 @@ public class GarageController {
     public Iterable<Garage> getCarsById(@RequestBody Iterable<Long> idArray) {
         return service.findAllById(idArray);
     }
+
+    @GetMapping("owner/{id}")
+    public  Iterable<Garage> getCarsByOwnerId(@PathVariable("id") Long id) {
+        return service.findByOwnerId(id);
+    };
 }

@@ -49,4 +49,8 @@ public class GarageService implements GarageI {
     public Iterable<Garage> findAllById(Iterable<Long> idArray) {
         return repository.findAllById(idArray);
     }
+
+    public Iterable<Garage> findByOwnerId(Long ownerId) {
+        return repository.findByOwnerOwnerId(ownerId);
+    }
 }
