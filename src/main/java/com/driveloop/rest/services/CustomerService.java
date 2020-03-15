@@ -41,4 +41,12 @@ public class CustomerService implements CustomerI {
     public void delete(Long id) {
         repository.deleteById(id);
     }
+
+    public Long count() {
+        return repository.count();
+    }
+
+    public Iterable<Customer> findAllById(Iterable<Long> idArray) {
+        return repository.findAllById(idArray);
+    }
 }

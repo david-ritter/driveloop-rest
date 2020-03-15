@@ -41,4 +41,12 @@ public class CustomerReviewService implements CustomerReviewI {
     public void delete(Long id) {
         repository.deleteById(id);
     }
+
+    public Long count() {
+        return repository.count();
+    }
+
+    public Iterable<CustomerReview> findAllById(Iterable<Long> idArray) {
+        return repository.findAllById(idArray);
+    }
 }

@@ -41,4 +41,12 @@ public class GarageService implements GarageI {
     public void delete(Long id) {
         repository.deleteById(id);
     }
+
+    public Long count() {
+        return repository.count();
+    }
+
+    public Iterable<Garage> findAllById(Iterable<Long> idArray) {
+        return repository.findAllById(idArray);
+    }
 }
